@@ -44,7 +44,7 @@
         
         const {city, country, flag} = JSON.parse(event.data)
         const message = `Last Visit from ${city}, ${country}, ${flag}`
-        const isLastEmpty = $last.innerHTML = ''
+        const isLastEmpty = $last.innerHTML === ''
 
         console.log(isLastEmpty)
 
@@ -54,8 +54,8 @@
         }
 
         $next.innerHTML = message
-        $next.style.animation = 'fadeInUp 1s ease-in-out forwards'
-        $last.style.animation = 'fadeOutUp 1s ease-in-out forwards'
+        $next.style.animation = 'fadeInUp 2s ease-in-out forwards'
+        $last.style.animation = 'fadeOutUp 2s ease-in-out forwards'
         ready = false
 
         $next.onanimationend = () => {
